@@ -11,11 +11,12 @@ while(True):
         print(f"{contador}. {nombre}")
         contador += 1
         
-    nombreAprendiz = input("\nIngrese el nombre de aprendiz (Inicial en mayuscula): ")
+    nombreAprendiz = input("\nIngrese el nombre de aprendiz (Inicial en mayuscula): ").strip()  
     
-    indice = listaNombres.index(nombreAprendiz)
+    
 
     if nombreAprendiz in listaNombres:
+        indice = listaNombres.index(nombreAprendiz)
         print(f"\nEl aprendiz se encuenta en la posicion: {indice}")
     else: 
         print(f"\nEl aprendiz no se encuenta en la lista")
@@ -23,8 +24,6 @@ while(True):
     continuar = int(input("\nDesea continuar? (1. SI - 2. NO) "))
     if continuar != 1:
         break
-    else:
-        continue
         
     
 
